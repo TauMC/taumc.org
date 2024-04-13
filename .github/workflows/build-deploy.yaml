@@ -15,11 +15,12 @@ jobs:
       contents: write
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Use Node LTS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "16" # lts
+          cache: 'npm'
 
       # This build runs with path prefix for github pages (hosted on subdirectory),
       # for example https://<USER>.github.io/<REPO-NAME>/
